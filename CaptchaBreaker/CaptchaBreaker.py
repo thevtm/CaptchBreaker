@@ -97,7 +97,7 @@ def CaptchaBreak(imgInput):
 	lettersOut = [ocr.image_to_string(img, lang = ocrLang, builder = ocrBuilder) for img in imgsOutPIL]
 	lettersOut = [('?' if l == '' else l) for l in lettersOut]
 
-	return(''.join(lettersOut))
+	return (''.join(lettersOut)).upper()
 
 if __name__ == "__main__":
     ## Consts/Args
